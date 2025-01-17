@@ -1,3 +1,4 @@
+# Fraud Detection in Reviews using Graph Neural Networks
 ### Bối cảnh và mục tiêu:
 - Trực tuyến đóng vai trò quan trọng trong việc ảnh hưởng đến quyết định của người tiêu dùng và uy tín doanh nghiệp.
 Sự xuất hiện của các đánh giá giả mạo gây thách thức lớn, ảnh hưởng đến tính toàn vẹn của nền tảng.
