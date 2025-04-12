@@ -1,23 +1,25 @@
 # Fraud Detection in Reviews using Graph Neural Networks
-### Bối cảnh và mục tiêu:
-- Trực tuyến đóng vai trò quan trọng trong việc ảnh hưởng đến quyết định của người tiêu dùng và uy tín doanh nghiệp.
-Sự xuất hiện của các đánh giá giả mạo gây thách thức lớn, ảnh hưởng đến tính toàn vẹn của nền tảng.
-- Mô hình đã huấn huấn luyện thể được tải và triển khai để dự đoán trên từng batch dữ liệu từ Spark Streaming cho dự án này.
-### Phương pháp:
 
-- Sử dụng bộ dữ liệu YelpChi, tập dữ liệu chứa hơn 67.000 đánh giá từ 38.000 người dùng và 201 khách sạn/nhà hàng.
-- Biểu diễn đồ thị với 3 loại quan hệ: đánh giá cùng người dùng, cùng sản phẩm (cùng đánh giá sao), và cùng thời điểm.
-- Triển khai GraphSAGE (một mô hình GNN dành cho đồ thị lớn) và CARE-GNN (một mô hình GNN tối ưu cho phát hiện gian lận).
-### Kết quả:
-Cả hai mô hình đều hiệu quả trong phát hiện gian lận:
-- GraphSAGE đạt độ chính xác 85%, nhưng gặp khó khăn với các nút được "ngụy trang".
-- CARE-GNN đạt ROC-AUC 0,76 và Recall 0,70, hiệu quả hơn trong việc phát hiện nhóm gian lận phối hợp.
-- CARE-GNN yêu cầu tinh chỉnh nhiều hơn và có độ phức tạp tính toán cao hơn.
-### Ưu điểm & Hạn chế:
+## Context and Objectives
+- Online reviews significantly influence consumer decisions and business reputation.
+- The rise of fake reviews poses a major challenge, undermining platform integrity.
+- The trained model can be loaded and deployed to predict on data batches from Spark Streaming for this project.
 
-- Ưu điểm: Tăng độ tin cậy của các hệ thống đánh giá trực tuyến, hỗ trợ phát hiện hành vi gian lận hiệu quả.
-- Hạn chế: Tập dữ liệu không đại diện hoàn toàn cho các ngành và nền tảng khác; yêu cầu tài nguyên tính toán lớn.
-### Kết luận và hướng phát triển:
+## Methods
+- Used the YelpChi dataset, containing over 67,000 reviews from 38,000 users and 201 hotels/restaurants.
+- Graph representation with three relation types: same user, same product (same star rating), and same time.
+- Implemented GraphSAGE (a GNN model for large graphs) and CARE-GNN (a GNN optimized for fraud detection).
 
-Nghiên cứu đóng góp vào việc phát triển hệ thống đánh giá đáng tin cậy, giúp người tiêu dùng đưa ra quyết định thông minh và bảo vệ uy tín doanh nghiệp.
-Hướng nghiên cứu tương lai bao gồm mở rộng tập dữ liệu, tối ưu hóa hiệu quả tính toán, và kết hợp phương pháp đồ thị với máy học truyền thống.
+## Results
+Both models were effective in fraud detection:
+- GraphSAGE achieved 85% accuracy but struggled with "camouflaged" nodes.
+- CARE-GNN achieved ROC-AUC of 0.76 and Recall of 0.70, performing better in detecting coordinated fraud groups.
+- CARE-GNN required more tuning and had higher computational complexity.
+
+## Advantages & Limitations
+- **Advantages**: Enhances reliability of online review systems, effectively detects fraudulent behavior.
+- **Limitations**: Dataset not fully representative of other industries and platforms; requires significant computational resources.
+
+## Conclusion and Future Directions
+The research contributes to developing trustworthy review systems, aiding consumers in making informed decisions and protecting business reputations.
+Future research directions include expanding the dataset, optimizing computational efficiency, and integrating graph-based methods with traditional machine learning.
